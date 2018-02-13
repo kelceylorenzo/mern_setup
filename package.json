@@ -1,22 +1,31 @@
 {
-  "name": "mern_setup",
-  "version": "1.0.0",
-  "description": "Boilerplate code for MERN stack setup",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m13kelore/mern_setup.git"
-  },
-  "author": "Kelcey Lorenzo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/m13kelore/mern_setup/issues"
-  },
-  "homepage": "https://github.com/m13kelore/mern_setup#readme",
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+	"name": "mern_setup",
+	"version": "1.0.0",
+	"description": "Boilerplate code for MERN stack setup",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server": "nodemon server.js",
+		"client": "npm run start --prefix client",
+		"dev": "concurrently \"npm run server \" \"npm run client\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/m13kelore/mern_setup.git"
+	},
+	"author": "Kelcey Lorenzo",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/m13kelore/mern_setup/issues"
+	},
+	"homepage": "https://github.com/m13kelore/mern_setup#readme",
+	"dependencies": {
+		"cors": "^2.8.4",
+		"express": "^4.16.2"
+	},
+	"devDependencies": {
+		"concurrently": "^3.5.1",
+		"nodemon": "^1.14.12"
+	}
 }
